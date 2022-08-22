@@ -1,30 +1,22 @@
 import React from "react";
-import { Link } from "react-router-dom";
-
 import './bootstrap/css/bootstrap.min.css';
 
 
-function NavbarItem({name, href}) {
-    return (
-        <li className="nav-item">
-            <Link className="nav-link" to={href}>{name}</Link>
-        </li>
-    )
-}
-
-/*const Menu = () => {
+const Menu = () => {
     return (
         <nav className="navbar navbar-expand-lg navbar-dark bg-dark py-3">
             <span className="navbar-brand">Menu</span>
             <div className="collapse navbar-collapse" id="navbarNavAltMarkup">
                 <div className="navbar-nav">
-                    <a className="nav-item nav-link" href="/userList">Список пользователей</a>
-                    <a className="nav-item nav-link" href="#">Список проектов</a>
-                    <a className="nav-item nav-link" href="#">Список to do</a>
+                    <a className="nav-item nav-link" href="#">List of all users</a>
+                    <a className="nav-item nav-link" href="#">User</a>
+                    <a className="nav-item nav-link" href="#">Login</a>
+                    <a className="nav-item nav-link" href="#">etc.</a>
                 </div>
             </div>
         </nav>
     )
+<<<<<<< HEAD
 }*/
 
 function Navbar({navbarItems}) {
@@ -38,7 +30,9 @@ function Navbar({navbarItems}) {
             </div>
         </nav>
     )
+=======
+>>>>>>> parent of d9a061b (Lesson-5)
 }
 
 
-export default Navbar
+export default Menu
