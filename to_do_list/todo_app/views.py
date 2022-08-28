@@ -1,7 +1,7 @@
 from django.shortcuts import render
 
 # Create your views here.
-from rest_framework import status
+from rest_framework import status, permissions
 from rest_framework.response import Response
 from rest_framework.pagination import LimitOffsetPagination
 from rest_framework.renderers import JSONRenderer, BrowsableAPIRenderer
@@ -19,6 +19,7 @@ class ProjectModelViewSet(ModelViewSet):
 	renderer_classes = [JSONRenderer, BrowsableAPIRenderer]
 	queryset = Project.objects.all()
 	serializer_class = ProjectModelSerializer
+	permission_classes = [permissions.IsAuthenticated]
 	pagination_class = ProjectLimitOffsetPagination
 
 	#http://127.0.0.1:8000/api/projects/?project_name=2 - фильтр по имени
