@@ -19,7 +19,6 @@ class ProjectModelViewSet(ModelViewSet):
 	renderer_classes = [JSONRenderer, BrowsableAPIRenderer]
 	queryset = Project.objects.all()
 	serializer_class = ProjectModelSerializer
-	permission_classes = [permissions.IsAuthenticated]
 	pagination_class = ProjectLimitOffsetPagination
 
 	#http://127.0.0.1:8000/api/projects/?project_name=2 - фильтр по имени
