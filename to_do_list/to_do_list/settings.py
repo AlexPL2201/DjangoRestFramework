@@ -40,7 +40,8 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    
+
+    'graphene_django',
     'rest_framework',
     'corsheaders',
     'django_filters',
@@ -153,4 +154,8 @@ REST_FRAMEWORK = {
     ],
 
     'DEFAULT_VERSIONING_CLASS': 'rest_framework.versioning.QueryParameterVersioning',
+}
+
+GRAPHENE = {
+    "SCHEMA": "to_do_list.schema.schema"
 }
